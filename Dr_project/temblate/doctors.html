@@ -11,13 +11,13 @@ Doctors
 
 <div class="card text-center mt-5 ms-5  bg-light " style=  " box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);  width: 20rem; display: inline-block; z-index: -500; " >
 
-    <img   src="{{d.doc_img.url}}" class="docimg  card-img-top" alt="photo"  >
+    <img  class="  card-img-top" style="cursor: pointer;" src="{{d.doc_img.url}}" alt="photo"  >
     <div class="card-body">
-      <h5 class="card-title fw-bold">Dr . {{d.doc_name}}</h5>
+      <h5  style="cursor: pointer;" class="card-title fw-bold">Dr . {{d.doc_name}}</h5>
       <p class="card-text">{{d.doc_spec}}</p>
       <h6>{{d.dept_name}} department</h6>
 
-      <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+    
     </div>
   </div>
 
