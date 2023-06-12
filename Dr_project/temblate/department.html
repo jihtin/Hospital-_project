@@ -1,0 +1,15 @@
+{% extends  'base.html' %} 
+
+{%block title %}
+Department
+{%endblock %}
+{%block content %}
+<h1 class="my-4 fw-bold" style="display: flex; color:#22A7F0     ; justify-content: center; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); ">OUR DEPARTMENTS</h1>
+<hr>
+{%for d in dept %}
+<div class="mx-auto w-50 bg-success text-center  text-white p-3 my-3 " style="border: 3px solid yellow; " >
+    <h2 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); " class="fw-bold">{{d.dept_name}}</h2>
+    <p>{{d.dept_description}}</p>
+</div>
+{%endfor%}
+{%endblock %} 

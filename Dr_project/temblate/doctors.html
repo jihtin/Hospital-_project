@@ -1,0 +1,26 @@
+{% extends  'base.html' %} 
+
+{%block title %}
+Doctors
+{%endblock %}
+{%block content %}
+<h1   class="my-4 fw-bold" style="display: flex; color:#22A7F0 ; justify-content: center; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); ">OUR DOCTORS</h1>
+
+
+{% for d in doc %}
+
+<div class="card text-center mt-5 ms-5  bg-light " style=  " box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);  width: 20rem; display: inline-block; z-index: -500; " >
+
+    <img   src="{{d.doc_img.url}}" class="docimg  card-img-top" alt="photo"  >
+    <div class="card-body">
+      <h5 class="card-title fw-bold">Dr . {{d.doc_name}}</h5>
+      <p class="card-text">{{d.doc_spec}}</p>
+      <h6>{{d.dept_name}} department</h6>
+
+      <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+    </div>
+  </div>
+
+  {%endfor%}
+
+{%endblock %}   

@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+li:hover {
+    background-color: #22A7F0;
+    border-radius: 5px;
+
+
+}
+
+li {
+    font-weight: bold;
+    font-family: cursive;
+    font-size: 18px;
+}
+.bghome{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    background-image:url('https://img.freepik.com/free-vector/clean-medical-background_53876-97927.jpg?w=996&t=st=1686506046~exp=1686506646~hmac=79850507d82a8ddd3b9c98d1d01a0b9d2444e65e0c88d8092fb7bf5cf991e21e');
+
+}
+.imghomebg {
+   border-top-right-radius: 320px;
+   border-bottom-left-radius: 320px;
+}
+.navigations{
+    position: sticky;
+    top: 0%;
+    z-index: 100%;
+}
+
