@@ -5,11 +5,12 @@ Booking
 {%endblock %}
 {%block content %}
 <h1 class="fw-bold text-center shadow p-3   ">Make an Appoinment</h1>
-<div class="text-center mt-5"> 
-<form action="">
+<div class="container text-center w-50 mt-5  bg-secondary p-5 text-white  " style="border-radius: 20px;"  > 
+<form action="" method="POST">
+    {% csrf_token %}
    
     {{form.as_p}}
-     <button class="bg-info p-2 fw-bold " style="border-radius: 13px; font-family: cursive;"  type="submit">Submit</button>
+     <button class="bg-info p-2 fw-bold mt-4 " style="border-radius: 13px; font-family: cursive;"  type="submit"  onclick="alert('we have recived your appoinment request , our representive will call you shortly ')" >Submit</button>
 
 </form>
 </div>
