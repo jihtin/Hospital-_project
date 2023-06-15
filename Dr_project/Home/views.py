@@ -38,3 +38,6 @@ def department(request):
         'dept':Department.objects.all()
     }
     return render(request,'department.html',dict_dept)
+
+def signin(request):
+    return render(request,'signin.html')

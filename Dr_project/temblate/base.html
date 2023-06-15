@@ -56,8 +56,8 @@
                                 Dropdown
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a href="{%url 'contact' %}">Contact</a></li>
+                             
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
@@ -72,7 +72,8 @@
 
 
                     </form>
-                    <button class="btn btn-primary me-1" type="submit">Signin</button>
+                    
+       
                     <button class="btn btn-primary  " type="submit">Logout</button>
 
 
@@ -106,6 +107,7 @@
                 <li><a href="{%url 'booking'%}">Booking</a></li>
                 <li><a href="{%url 'doctors' %}">Doctors</a></li>
                 <li><a href="{%url 'department' %}">Department</a></li>
+                <li><a href="{%url 'contact' %}">Contact</a></li>
               </ul>
             </div>
             <div class="col-md-3">
@@ -124,6 +126,8 @@
           </div>
         </div>
       </footer>
+
+      
       
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
