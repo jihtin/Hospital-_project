@@ -39,5 +39,5 @@ def department(request):
     }
     return render(request,'department.html',dict_dept)
 
-def signin(request):
+def sig(request):
     return render(request,'signin.html')

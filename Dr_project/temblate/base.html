@@ -66,15 +66,18 @@
                         </li>
 
                     </ul>
-                    <form class="d-flex ">
-                        <input class="form-control me-2 " type="search" placeholder="Search department" aria-label="Search">
-                        <button class="btn btn-warning me-4" type="submit">Search</button>
-
-
-                    </form>
-                    
+              
        
-                    <button class="btn btn-primary  " type="submit">Logout</button>
+                  
+
+                    <div class="sinbtn me-5 ps-3  bg-primary text-center shadow" id="navbarSupportedContent" style="border-radius:20px; ">
+                      <ul class="navbaars   navbar-nav me-auto mb-2 mb-lg-0 ff-5">
+                          <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" href="{% url 'sig' %}">Signin</a>
+                          </li>
+                          <li class="nav-item me-3 ">
+                              <a class="nav-link" href="{%url 'about' %}">Logout</a>
+                          </li>
 
 
 
