@@ -1,17 +1,20 @@
-{% extends  'base.html' %} 
+{% extends 'base.html' %}
 
-{%block title %}
+{% block title %}
 Booking
-{%endblock %}
-{%block content %}
-<h1 class="fw-bold text-center shadow p-3   ">Make an Appoinment</h1>
-<div class="container text-center w-50 mt-5  bg-secondary p-5 text-white  " style="border-radius: 20px;"  > 
-<form action="" method="POST">
-    {% csrf_token %}
-   
-    {{form.as_p}}
-     <button class="bg-info p-2 fw-bold mt-4 " style="border-radius: 13px; font-family: cursive;"  type="submit"  onclick="alert('we have recived your appoinment request , our representive will call you shortly ')" >Submit</button>
+{% endblock %}
 
-</form>
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+<h1 class="fw-bold text-center shadow p-3 animate__animated animate__fadeIn">Make an Appointment</h1>
+<div class="container text-center w-50 mt-5 bg-secondary p-5 text-white border-radius-20 animate__animated animate__fadeInUp">
+    <form action="" method="POST">
+        {% csrf_token %}
+   
+        {{ form.as_p }}
+        <button class="bg-info p-2 fw-bold mt-4 animate__animated animate__fadeIn" type="submit" onclick="alert('We have received your appointment request. Our representative will call you shortly.')">Submit</button>
+
+    </form>
 </div>
-{%endblock %}   
+{% endblock %}

@@ -12,16 +12,24 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css ">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
-    <link rel="stylesheet" 
-    href="{% static '/css/style.css'%}">
+    <link rel="stylesheet" href="{% static '/css/style.css'%}">
 
+    <style>
+        .navbar {
+            background-image: linear-gradient(to right, #00416A, #e4e9f7);
+        }
+
+        .footer {
+            background-image: linear-gradient(to right, #212529, #000000);
+        }
+    </style>
 </head>
 
 <body>
      
-    <div class="navigations  " style="width: 100vw;">
+    <div class="navigations animate__animated animate__fadeIn">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{% url 'home' %}">
@@ -33,22 +41,22 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class=" collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbaars   navbar-nav me-auto mb-2 mb-lg-0 ff-5">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ff-5" >
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{%url 'about' %}">About</a>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="{% url 'about' %}">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{%url 'booking' %}">Booking</a>
+                            <a class="nav-link" href="{% url 'booking' %}">Booking</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{%url 'doctors' %}">Doctors</a>
+                            <a class="nav-link" href="{% url 'doctors' %}">Doctors</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{%url 'department' %}">Department</a>
+                            <a class="nav-link" href="{% url 'department' %}">Department</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -56,7 +64,7 @@
                                 Dropdown
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <li><a href="{%url 'contact' %}">Contact</a></li>
+                              <li><a href="{% url 'contact' %}">Contact</a></li>
                              
                                 <li>
                                     <hr class="dropdown-divider">
@@ -66,11 +74,8 @@
                         </li>
 
                     </ul>
-              
-       
-                  
 
-                    <div class="sinbtn me-5 ps-3  bg-primary text-center shadow" id="navbarSupportedContent" style="border-radius:20px; ">
+                    <div class="sinbtn me-5 ps-3 bg-primary text-center shadow" id="navbarSupportedContent" style="border-radius:20px; ">
                       <ul class="navbaars   navbar-nav me-auto mb-2 mb-lg-0 ff-5">
                           <li class="nav-item">
                               <a class="nav-link active" aria-current="page" href="{% url 'sig' %}">Signin</a>
@@ -78,66 +83,58 @@
                           <li class="nav-item me-3 ">
                               <a class="nav-link" href="#">Logout</a>
                           </li>
-
-
-
-
+                      </ul>
+                    </div>
                 </div>
-
             </div>
         </nav>
-
     </div>
     
-    {%block content %} {%endblock %}
-    <footer class="footer">
-        <div class="  mt-5 bg-dark text-white p-5 ">
-          <div class="row">
-            <div class="col-md-6">
-              <h3>NovaCare</h3>
-              <p class="my-5">A hospital is a medical facility that provides <br>specialized medical care to patients</p>
-              <div class="social-icons " style="display: flex; gap:40px ;" >
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-              </div>
+    {% block content %}{% endblock %}
+    
+    <footer class="footer animate__animated animate__fadeIn">
+        <div class="container mt-5 bg-dark text-white p-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>NovaCare</h3>
+                    <p class="my-5">A hospital is a medical facility that provides specialized medical care to patients</p>
+                    <div class="social-icons" style="display: flex; gap:40px;">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'about' %}">About</a></li>
+                        <li><a href="{% url 'booking' %}">Booking</a></li>
+                        <li><a href="{% url 'doctors' %}">Doctors</a></li>
+                        <li><a href="{% url 'department' %}">Department</a></li>
+                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4>Contact Us</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-envelope"></i> info@example.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (123) 456-7890</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Street, City, Country</li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-md-3">
-              <h4>Quick Links</h4>
-              <ul class="list-unstyled">
-                <li><a href="{%url 'home'%}">Home</a></li>
-                <li><a href="{%url 'about'%}">About</a></li>
-                <li><a href="{%url 'booking'%}">Booking</a></li>
-                <li><a href="{%url 'doctors' %}">Doctors</a></li>
-                <li><a href="{%url 'department' %}">Department</a></li>
-                <li><a href="{%url 'contact' %}">Contact</a></li>
-              </ul>
+            <hr>
+            <div class="text-center">
+                <p class="text-muted">&copy; 2023 Your Company. All rights reserved.</p>
+                <a href="#" class="back-to-top">Back to top</a>
             </div>
-            <div class="col-md-3">
-              <h4>Contact Us</h4>
-              <ul class="list-unstyled">
-                <li><i class="fas fa-envelope"></i> info@example.com</li>
-                <li><i class="fas fa-phone"></i> +1 (123) 456-7890</li>
-                <li><i class="fas fa-map-marker-alt"></i> 123 Street, City, Country</li>
-              </ul>
-            </div>
-          </div>
-          <hr>
-          <div class="text-center">
-            <p class="text-muted">&copy; 2023 Your Company. All rights reserved.</p>
-            <a href="#" class="back-to-top">Back to top</a>
-          </div>
         </div>
-      </footer>
-
-      
-      
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-
-
 </body>
 
 </html>

@@ -1,108 +1,32 @@
-{% extends  'base.html' %} 
+{% extends 'base.html' %}
 
-{%block title %}
+{% block title %}
 home
-{%endblock %}
-{%block content %}
+{% endblock %}
+{% block content %}
 
-{%load static %}
+{% load static %}
 
-<div  style="z-index: -500;" id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-   <div class="carousel-indicators">
-     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-   </div>
-   <div class="carousel-inner">
-     <div class="carousel-item active" data-bs-interval="1000" >
-       <img src="https://www.nationalhospitals.com/Userfiles/Banner/about-us-bg.png" class="d-block w-100" alt="...">
-     
-     </div>
-     <div class="carousel-item" data-bs-interval="1000">
-       <img src="https://www.nationalhospitals.com/Userfiles/Banner/f2ad27555cc44d8b8450e5e5ba970988.jpg" class="d-block w-100" alt="...">
-      
-     </div>
-     <div class="carousel-item">
-       <img src=" https://www.nationalhospitals.com/Userfiles/Banner/0a2ae7089d294da698938c3f4db2570a.jpg" class="d-block w-100" alt="...">
-      
-     </div>
-   </div>
-   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-     <span class="visually-hidden">Previous</span>
-   </button>
-   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-     <span class="visually-hidden">Next</span>
-   </button>
- </div>
-  
-
-
-<div   style="display: flex; justify-content: center;">
-<img class="w-50  img-fluid my-5" src="https://t3.ftcdn.net/jpg/05/71/30/74/240_F_571307420_UnokRFfpQRhwlEqCcBkbcIaNdUTrzJhu.jpg" >
+<div style="z-index: -500;" id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+   <!-- Carousel content -->
 </div>
-<div class="bghome container-fluid d-flix">
-   <div class=" fw-bold " style=" margin-top: 160px; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size:60px;color:#006442; "  >We are <br>Committed <br>to Your <br>Health </div>
 
-   <div class="d-flex justify-content-end ">
-    <img class="imghomebg  ms-5 img-fluid " src="https://img.freepik.com/free-photo/happy-doctor-holding-clipboard-with-patients_1098-2176.jpg?w=996&t=st=1686505943~exp=1686506543~hmac=1974686c81e5e25b8d2e5717abce75e33797520de11578a7e0bbb0982ced3441" > 
+<div class="d-flex justify-content-center">
+   <img class="w-50 img-fluid my-5" src="https://t3.ftcdn.net/jpg/05/71/30/74/240_F_571307420_UnokRFfpQRhwlEqCcBkbcIaNdUTrzJhu.jpg">
+</div>
+
+<div class="bghome container-fluid d-flex justify-content-center">
+   <div class="fw-bold text-center" style="margin-top: 160px; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 60px; color: #006442;">
+      We are <br>Committed <br>to Your <br>Health
    </div>
-   
+
+   <div class="d-flex justify-content-end">
+      <img class="imghomebg ms-5 img-fluid" src="https://img.freepik.com/free-photo/happy-doctor-holding-clipboard-with-patients_1098-2176.jpg?w=996&t=st=1686505943~exp=1686506543~hmac=1974686c81e5e25b8d2e5717abce75e33797520de11578a7e0bbb0982ced3441">
    </div>
-   <div style="display:flex;flex-direction: row;">
-      <img class="w-50 h-50 ms-4" style="margin-top: 180px;border-top-right-radius: 320px;border-bottom-left-radius: 320px;" src="https://img.freepik.com/free-photo/pleased-young-female-doctor-wearing-medical-robe-stethoscope-around-neck-standing-with-closed-posture_409827-254.jpg?w=996&t=st=1686585209~exp=1686585809~hmac=bb0b4bc2dc0bb2b57e4048727c9ea21e7bbfd4338763ac1a47109ce46b45fe05" >
-     <p class="ms-5 fs-1 fw-bold" style="margin-top: 350px;color: #006442;" >We are Here to Hear and Heal <br> Your Health Problems</p>
-   </div>
-   
-   <div class="card chart-container">
-    <canvas id="chart"></canvas>
-  </div>
-  <style>
-    .chart-container {
-      width: 50%;
-      height: 50%;
-      margin: auto;
-      margin-top: 2%;
-    }
-  </style>
+</div>
 
-
-
-
-  <div class="animated bounce infinite">
-    <img class="ms-5 mt-5" src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80" alt="afaf" style="width:20%x;height: auto;" />
-  </div>
-
-
-  <script
-src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js">
-</script>
-<script>
-      const ctx = document.getElementById("chart").getContext('2d');
-      const myChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels: ["sunday", "monday", "tuesday",
-          "wednesday", "thursday", "friday", "saturday"],
-          datasets: [{
-            label: 'Last week',
-            backgroundColor: 'rgba(161, 198, 247, 1)',
-            borderColor: 'rgb(47, 128, 237)',
-            data: [3000, 4000, 2000, 5000, 8000, 9000,10000],
-          }]
-        },
-        options: {
-          scales: {
-            yAxes: [{
-              ticks: {
-                beginAtZero: true,
-              }
-            }]
-          }
-        },
-      });
-</script>
-  
-
-   {%endblock %}   
+<div style="display:flex;flex-direction: row;">
+   <img class="w-50 h-50 ms-4" style="margin-top: 180px;border-top-right-radius: 320px;border-bottom-left-radius: 320px;" src="https://img.freepik.com/free-photo/pleased-young-female-doctor-wearing-medical-robe-stethoscope-around-neck-standing-with-closed-posture_409827-254.jpg?w=996&t=st=1686585209~exp=1686585809~hmac=bb0b4bc2dc0bb2b57e4048727c9ea21e7bbfd4338763ac1a47109ce46b45fe05">
+   <p class="ms-5 fs-1 fw-bold" style="margin-top: 350px;color: #006442;">We are Here to Hear and Heal<br>Your Health Problems</p>
+</div>
+{% endblock %}
