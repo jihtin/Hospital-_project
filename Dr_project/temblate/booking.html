@@ -12,7 +12,7 @@ Booking
     <form action="" method="POST">
         {% csrf_token %}
    
-        {{ form.as_p }}
+        {{ form.as_p}}
         <button class="bg-info p-2 fw-bold mt-4 animate__animated animate__fadeIn" type="submit" onclick="alert('We have received your appointment request. Our representative will call you shortly.')">Submit</button>
 
     </form>
